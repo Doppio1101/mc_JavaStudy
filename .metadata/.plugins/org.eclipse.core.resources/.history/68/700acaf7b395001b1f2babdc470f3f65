@@ -1,0 +1,10 @@
+package mc.sn.day6;
+
+public class Circle extends Shape {
+	@Override
+	public void draw() {
+		// TODO Auto-generated method stub
+		super.draw();
+		//System.out.println("circle");
+	}
+}

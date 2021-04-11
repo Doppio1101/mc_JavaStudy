@@ -1,0 +1,23 @@
+package mc.sn.day7;
+
+public class TestException {
+	//예외처리
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TestException te = new TestException();
+		te.test1();
+	}
+	
+	public void test1() {
+		System.out.println("test1");
+		int a = 0;
+		int c = 10;
+		try {
+			c = 10/a;//오류문장임
+		}catch(ArithmeticException e) {
+			System.out.println("에러 발생" + e.getMessage());
+		}
+		System.out.println(c);
+	}
+
+}

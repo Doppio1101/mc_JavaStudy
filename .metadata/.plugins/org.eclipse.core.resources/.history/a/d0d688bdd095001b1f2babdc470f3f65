@@ -1,0 +1,39 @@
+package mc.sn.practice;
+import java.util.Scanner;
+
+public class BamkApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		boolean run = true;
+		while(run) {
+			System.out.println("------------------");
+			System.out.println("1, 2, 3, 4, 5");
+			System.out.println("------------------");
+			System.out.println("¼±ÅÃ>");
+			
+			int selectNo = scanner.nextInt();
+			
+			
+			
+			
+		}
+	}
+	
+	public void acntCreate() {
+		
+	}
+	public void acntList() {
+		
+	}
+	public void acntIn() {
+		
+	}
+	public void acntOut() {
+		
+	}
+	public void Exit() {
+		
+	}
+
+}

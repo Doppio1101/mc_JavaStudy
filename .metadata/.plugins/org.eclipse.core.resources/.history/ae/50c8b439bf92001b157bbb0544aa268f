@@ -1,0 +1,19 @@
+package mc.sn.day4;
+
+public class Studio {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Studio s = new Studio();
+		s.readyLottoBall();
+	}
+	
+	public void readyLottoBall() {
+		LottoBall[] ballBox = new LottoBall[45];
+		LottoBall ball = new LottoBall("1");
+		System.out.println(ball.getBallNumber());
+	
+	
+	}
+
+}

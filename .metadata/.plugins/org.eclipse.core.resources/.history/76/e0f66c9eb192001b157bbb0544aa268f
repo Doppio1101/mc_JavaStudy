@@ -1,0 +1,6 @@
+package mc.sn.day4;
+
+public class DataClass {
+	public String name;
+	public String sex;
+}

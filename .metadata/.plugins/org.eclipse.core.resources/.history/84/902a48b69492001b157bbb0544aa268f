@@ -1,0 +1,42 @@
+package mc.sn.day4;
+
+public class MyCalendar {
+	public void displayMonth(int year, int Month) {
+		int day = 0;
+		int space = 0;
+		int lastday = 31;
+			System.out.println(Month+"월");
+			System.out.println("일\t월\t화\t수\t목\t금\t토");
+			Example e = new Example();
+			boolean flag = e.isLeapYear(year);
+			if(Month == 2) {
+				if(flag) {
+					lastday = 29;
+				}
+				else {
+					lastday = 28;
+				}
+			}
+			else if(Month == 4 ||Month == 6||Month == 9||Month == 11) {
+				lastday = 30;
+			}
+			
+			for(int s=0; s<space; s++) {
+				System.out.print("\t");	
+			}
+			
+			for(int i=1; i<=lastday; i++) {
+				day = i;
+				System.out.print(day+"\t");
+
+				if((space+day)%7 ==0) {
+					System.out.println("");
+				
+				}
+			
+			}
+			System.out.println("");
+			System.out.println("");
+
+	}
+}

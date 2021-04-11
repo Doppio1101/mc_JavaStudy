@@ -1,0 +1,10 @@
+package mc.sn.day8;
+
+public class TestAPI {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

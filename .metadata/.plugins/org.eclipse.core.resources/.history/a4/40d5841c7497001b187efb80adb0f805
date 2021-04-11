@@ -1,0 +1,30 @@
+package mc.sn.day8;
+
+import java.util.Calendar;
+
+public class TestCalendar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TestCalendar tc = new TestCalendar();
+		tc.test1();
+		
+	}
+	public void test1() {
+		//싱글톤 -> 객체생성을 사람이 하는 게 아니라 클래스에서 진행.
+		//싱글톤은 일반적으로 private로 생성.
+		Calendar cal = Calendar.getInstance();
+		int year = cal.get(Calendar.YEAR);
+		int month = cal.get(Calendar.MONTH)+1;
+		int day = cal.get(Calendar.DAY_OF_MONTH);//일정보
+		int date = cal.get(Calendar.DAY_OF_WEEK);//요일
+		int hour = cal.get(Calendar.HOUR);
+		int minute = cal.get(Calendar.MINUTE);
+		int second = cal.get(Calendar.SECOND);
+		
+		
+		System.out.println(year+"/"+month+"/"+day+" "+date);
+	
+	}
+
+}

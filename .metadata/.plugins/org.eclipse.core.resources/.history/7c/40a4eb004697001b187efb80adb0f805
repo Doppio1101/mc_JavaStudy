@@ -1,0 +1,45 @@
+package mc.sn.day8;
+
+import java.util.Date;
+import java.util.Random;
+import java.lang.*;//기본 패키지의 모든 것은 기본으로 가져온다.
+
+public class TestAPI {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TestAPI ta = new TestAPI();
+		ta.testRandom();
+		System.out.println("");
+		ta.testMath();
+		
+	}
+	
+	public void testRandom() {
+		//Random클래스 확인
+		Random r = new Random();
+		String name = "kim";
+		for(int i=0; i<6; i++) {
+			double rrd = r.nextInt(45);
+			//0~44까지 값 리턴
+			System.out.print(rrd+"\t");
+		}
+	}
+	
+	public void testMath() {
+		//Math 쿨래스 확인
+		//Math math = new Math();
+		//Math가 final임. 생성자 없음.
+		//static임. -> 상수이다.
+		Double r = Math.random();
+		System.out.println(r);
+		//0.0 <= r <1.0(0.9999999999...)
+		
+	}
+	
+	
+	public void testDate() {
+		Date date = new Date();
+	}
+
+}

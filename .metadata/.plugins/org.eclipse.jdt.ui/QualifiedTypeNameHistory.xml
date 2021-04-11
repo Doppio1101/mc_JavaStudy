@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="mc.sn.day4.Studio"/>
+    <fullyQualifiedTypeName name="mc.sn.day5.MainClass"/>
+    <fullyQualifiedTypeName name="mc.sn.day4.LottoBall"/>
+    <fullyQualifiedTypeName name="jdk.vm.ci.meta.JavaKind.FormatWithToString"/>
+    <fullyQualifiedTypeName name="mc.sn.day6.Circle"/>
+    <fullyQualifiedTypeName name="mc.sn.day6.Rectangle"/>
+    <fullyQualifiedTypeName name="mc.sn.day6.Triangle"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="mc.sn.day6.CodeExample"/>
+    <fullyQualifiedTypeName name="mc.sn.practice.StudyReview1"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="mc.sn.day7.TestException"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="mc.sn.day7.ThreadTest"/>
+    <fullyQualifiedTypeName name="mc.sn.day7.YourThread"/>
+    <fullyQualifiedTypeName name="mc.sn.day7.ThreadTest.HisThread"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="mc.sn.practice.AccountExample"/>
+    <fullyQualifiedTypeName name="mc.sn.day8.InterfaceReview"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="mc.sn.day8.TestAPI"/>
+    <fullyQualifiedTypeName name="mc.sn.day8.TestString"/>
+    <fullyQualifiedTypeName name="mc.sn.day8.TestString.DateInfo"/>
+    <fullyQualifiedTypeName name="mc.sn.day8.TestCalendar"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="mc.sn.practice.BankApplication"/>
+    <fullyQualifiedTypeName name="mc.sn.practice.Account"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+</qualifiedTypeNameHistroy>

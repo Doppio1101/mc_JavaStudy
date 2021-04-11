@@ -1,0 +1,19 @@
+package mc.sn.day4;
+
+public class StringTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringTest t = new StringTest();
+		t.test1();
+		
+	}
+	public void test1() {
+		String name = "kim";
+		String addr = "¼­¿ï½Ã";
+		System.out.println(name+","+addr);
+		String n = new String("kim");
+		System.out.println(n);
+	}
+
+}

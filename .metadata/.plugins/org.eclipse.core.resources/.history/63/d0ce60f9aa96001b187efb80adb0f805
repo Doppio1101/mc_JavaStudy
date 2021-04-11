@@ -1,0 +1,5 @@
+package mc.sn.day7;
+
+public class MyThread extends Thread {
+
+}

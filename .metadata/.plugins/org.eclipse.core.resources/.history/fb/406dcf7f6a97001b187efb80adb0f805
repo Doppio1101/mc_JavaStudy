@@ -1,0 +1,18 @@
+package mc.sn.day8;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class testString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void test1() {
+		String pattern = "yyyy/MM/dd HH:mm:ss";
+		SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+		String now = sdf.format(new Date());
+		System.out.println(now);
+	}
+}

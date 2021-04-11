@@ -1,0 +1,14 @@
+package mc.sn.day7;
+
+public class TestException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TestException TE = new TestException();
+		TE.test1();
+	}
+	public void test1() {
+		System.out.println("test1");
+	}
+
+}

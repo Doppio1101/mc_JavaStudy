@@ -1,0 +1,16 @@
+package mc.sn.day4;
+
+public class DataClass {
+	//기본 생성자
+	public DataClass() {
+		//아무것도 없는 상태가 기본 생성자
+	}
+	//생성자.
+	public DataClass(String sex) {
+		this.sex = sex;
+	}
+	
+	public String name;
+	public String sex;
+	
+}
