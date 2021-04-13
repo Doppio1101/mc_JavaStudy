@@ -1,8 +1,0 @@
-package mc.sn.practice;
-
-public class Snippet {
-	public static void main(String[] args) {
-		System.out.println();
-	}
-}
-
