@@ -1,2 +1,5 @@
 select * from EMPLOYEES;
 select * from USERTBL;
+
+SELECT LAST_NAME, FIRST_NAME
+FROM EMPLOYEES;
