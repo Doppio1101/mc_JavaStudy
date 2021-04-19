@@ -27,7 +27,7 @@ public class testQuery {
 		// TODO Auto-generated method stub
 		testQuery tq = new testQuery();
 		try {
-			tq.query1();
+			tq.query5();
 			tq.quiz2();
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -84,7 +84,7 @@ public class testQuery {
 //
 //		}
 	}
-public void quiz2() throws ClassNotFoundException, SQLException {
+	public void quiz2() throws ClassNotFoundException, SQLException {
 		//기사 테이블의 내용을 조회
 		//지역코드가 B이고 국어+영어 점수가 최대인 것 조회
 		String sql = "select max(kor+eng) from gisaTBL "
@@ -108,42 +108,42 @@ public void quiz2() throws ClassNotFoundException, SQLException {
 		rs.close();
 		pstmt.close();
 		con.close();
-}
+	}
 
 	
 	
-public void query5() throws ClassNotFoundException, SQLException {
-	//기사 테이블의 내용을 조회
-	//지역코드가 B이고 국어+영어 점수가 최대인 것 조회
-	String sql = "select stdNo,email,kor,eng from gisaTBL "
-							+ "where localcode = ?";
-	
-	Connection con = this.getConnection();
-	PreparedStatement pstmt = con.prepareStatement(sql);
-	pstmt.setString(1, "B");
-	
-	ResultSet rs = pstmt.executeQuery();//리턴타입이 테이블을 처리할 수 있는 타입이어야 한다.
-	//그게 ResultSet
-	//테이블 처리 방법
-	while(rs.next()) {
+	public void query5() throws ClassNotFoundException, SQLException {
+		//기사 테이블의 내용을 조회
+		//지역코드가 B이고 국어+영어 점수가 최대인 것 조회
+		String sql = "select stdNo,email,kor,eng from gisaTBL "
+								+ "where localcode = ?";
 		
-		int stdNo = rs.getInt("stdNo");
-		String email = rs.getString("email");
-		int kor = rs.getInt("kor");
-		int eng = rs.getInt("eng");
+		Connection con = this.getConnection();
+		PreparedStatement pstmt = con.prepareStatement(sql);
+		pstmt.setString(1, "B");
 		
-		System.out.println(stdNo+","+email+","+kor+","+eng);
-	}//행이 몇개인지 모른다 -> 우리가 넣은 정보일 때 말고
-	//rs.next()를 하면 다음 행에 데이터가 없을 때, false를 반환함.
-	// 다음 라인에 정보가 있으면 True
-	rs.close();
-	pstmt.close();
-	con.close();
-}
+		ResultSet rs = pstmt.executeQuery();//리턴타입이 테이블을 처리할 수 있는 타입이어야 한다.
+		//그게 ResultSet
+		//테이블 처리 방법
+		while(rs.next()) {
+			
+			int stdNo = rs.getInt("stdNo");
+			String email = rs.getString("email");
+			int kor = rs.getInt("kor");
+			int eng = rs.getInt("eng");
+			
+			System.out.println(stdNo+","+email+","+kor+","+eng);
+		}//행이 몇개인지 모른다 -> 우리가 넣은 정보일 때 말고
+		//rs.next()를 하면 다음 행에 데이터가 없을 때, false를 반환함.
+		// 다음 라인에 정보가 있으면 True
+		rs.close();
+		pstmt.close();
+		con.close();
+	}
 	
-public void query4() throws NumberFormatException, IOException, ClassNotFoundException, SQLException {
-		
-		this.makeGisaData();
+	public void query4() throws NumberFormatException, IOException, ClassNotFoundException, SQLException {
+		//데이터 천 개 입력부분으로 이미 만든것과 겹치기때문에 주석처리.
+		//this.makeGisaData();
 		System.out.println(list.size());
 		//gisaTBL에 한 줄의 값을 삽입.
 		//StudentDTO dto = list.get(1);//이미 있음 바꿔야 됨 -> 삭제함
@@ -169,11 +169,11 @@ public void query4() throws NumberFormatException, IOException, ClassNotFoundExc
 			pstmt.setString(11, dto.getLocalCode());
 			//스키마 타입과 맞을 때만 넣어주고 아닐 때는 튕긴다.
 			//System.out.println(sql);
-	//		Statement stmt = con.createStatement();
-	//		stmt.executeUpdate(sql);
-	//		stmt.close();
-	//		con.close();
-			
+		//		Statement stmt = con.createStatement();
+		//		stmt.executeUpdate(sql);
+		//		stmt.close();
+		//		con.close();
+				
 			//여러개의 다른 데이터 타입을 넣을 때 더럽게 나오고
 			// 객체를 넣지 못하고, 매번 컴파일이 되는 불편함이 있다.
 			//그래서 Statement를 상속받는 것이 있다.
@@ -189,7 +189,7 @@ public void query4() throws NumberFormatException, IOException, ClassNotFoundExc
 		
 	}	
 	
-public void query3() throws NumberFormatException, IOException, ClassNotFoundException, SQLException {
+	public void query3() throws NumberFormatException, IOException, ClassNotFoundException, SQLException {
 		
 		this.makeGisaData();
 		System.out.println(list.size());
