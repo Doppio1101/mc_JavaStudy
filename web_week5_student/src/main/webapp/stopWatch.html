@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+	<script type="text/javascript">
+		var stopWatch;
+		var start = function() {
+			document.querySelector("#watchBtn").value = "멈춤";
+			
+			
+			var clock = document.getElementById("watchBtn");
+			
+			var watch = document.getElementById("stopwatch");
+			clock.setAttribute("onclick","stop()")
+			var x = 0;
+			var y = 0;
+			var z = 0;
+			stopWatch = setInterval(function() {
+				if(z ==99){
+					z =0;
+					y = y +1;
+				}
+				if(y == 60){
+					y = 0;
+					x = x+1;
+				}
+				watch.innerHTML = x+":"+y+":"+z;
+				z = z+1;
+				
+			}, 10);
+			
+		}
+		var stop = function() {
+			document.querySelector("#watchBtn").value = "시작";
+			
+			
+			var clock = document.getElementById("watchBtn");
+			
+			var watch = document.getElementById("stopwatch");
+			clock.setAttribute("onclick","start()")
+			clearInterval(stopWatch);
+				
+		}
+	
+	</script>
+
+
+
+</head>
+<body>
+
+	<h3 id="stopwatch"></h3>
+	<input type="button" id="watchBtn" value = "시작"onclick="start()">
+	
+
+</body>
+</html>

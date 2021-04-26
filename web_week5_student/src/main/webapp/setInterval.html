@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>1초마다 내용이 바뀐다고?</title>
+	<script type="text/javascript">
+	
+		window.onload = function(){
+			var clock = document.getElementById('clock');
+			setInterval(function(){
+				var now = new Date();
+				clock.innerHTML = now.toString();
+				
+				
+			},1000);
+		
+		};
+	
+	</script>
+
+
+
+</head>
+<body>
+	<h1 id="clock"></h1>
+</body>
+</html>

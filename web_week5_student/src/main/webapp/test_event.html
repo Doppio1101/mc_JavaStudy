@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>JS event</title>
+<style type="text/css">
+	#btn1 {color : red;			}
+
+
+</style>
+
+<script type="text/javascript">
+
+	var changecolor = function(){
+		var color = document.querySelector("#btncolor").value;
+		document.querySelector('#btn1').style.color = color;
+		
+	};
+	//document.querySelector('#btn2').style.color = 'blue'; 위에서 선언되서 #btn2를 못 찾음
+	window.onload = function() {
+		document.querySelector('#btn2').style.color = 'blue';
+	}
+	
+	var changevalue = function(){
+		var val = document.querySelector("#btnvalue").value;
+		document.querySelector('#btn3').value = val;
+		
+	};
+
+</script>
+
+
+</head>
+
+<body>
+	<input type="text" id="btncolor" name="btncolor" placeholder = "여기에 색을 넣어주세요.">
+	<br>
+	<input type="button" id="btn1" name="btn1" value="js를 이용해 색깔 바꾸기" onclick="changecolor()">
+	<br>
+	<input type="button" id="btn2" name="btn2" value="이 버튼의 색깔은 window.onload로 바뀜">
+	<br>
+	<input type="text" id="btnvalue" name="btnvalue" placeholder = "여기에 바꿀 내용을 넣어주세요.">
+	<br>
+	<input type="button" id="btn3" name="btn3" value="js를 이용해 내용 바꾸기" onclick="changevalue()">
+
+
+</body>
+</html>
