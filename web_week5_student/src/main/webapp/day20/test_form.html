@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form Test</title>
+
+	<script type="text/javascript">
+	
+		var checkId = function() {
+			var text = document.querySelector("#userId").value;
+			alert("checkID: "+text);
+			
+		}
+		var checkPwd = function() {
+			var text = document.querySelector("#pwd1").value;
+			alert("checkPwd: "+text);
+			
+		}
+		var checkPw = function() {
+			var text = document.querySelector("#pwd1").value;
+			var text1 = document.querySelector("#pwd2").value;
+			if(text == text1){
+				alert("일치합니다.");
+
+			}else alert("일치하지 않습니다. 확인해주세요.");
+			
+		}
+		var checkSex = function(){
+			var text = document.getElementsByName("gender");
+			for(var i=0; i<text.length; i++){
+				if(text[i].checked){
+					alert(text[i].value);
+				}
+			}
+		}
+		var checkLang = function(){
+			var langs = document.getElementsByName("lang");
+			for(var i=0; i<langs.length; i++){
+				if(langs[i].checked){
+					alert(langs[i].value);
+				}
+			}
+		}
+		var checkOpt = function(){
+			var text = document.getElementById("hobby");
+			alert(hobby.value);
+		}
+		var checkData = function(){
+			var flag = false;
+			var langs = document.getElementsByName("lang");
+			var cnt =0;
+			for(var i=0; i<langs.length; i++){
+				if(langs[i].checked){
+					alert(langs[i].value);
+					cnt +=1;
+				}
+			}
+			if(cnt>=2){
+				alert(cnt+"개 체크 확인됐습니다.");
+				flag = true;
+			}else{
+				alert("사용언어를 2개이상 선택해주세요.");
+			}
+			
+			
+			
+			return flag;
+		}
+
+	
+	</script>
+</head>
+<body>
+
+	<form action="" method ="get" onsubmit="return checkData()">
+		<table>
+		  <tr>
+		    <td>userID</td>
+		    <td><input type="text" id="userId" name="id"></td>
+		    <td><input type="button" onclick="checkId()" id=idBtn name="" value="확인"></td>
+		  </tr>
+		  <tr>
+		    <td>password1</td>
+		    <td><input type = "password" id="pwd1" name="pwd1"></td>
+		  	<td><input type="button"  onclick="checkPwd()" id="" name="" value="확인"></td>
+		  </tr>
+		  <tr>
+		    <td>password2</td>
+		    <td><input type = "password" id="pwd2" name="pwd2"></td>
+		    <td><input type="button" onclick="checkPw()" id="" name="" value="확인"></td>
+		  </tr>
+		  <tr>
+		    <td>성별</td>
+		    <td><input type="radio" id="gender1" value="male" name="gender">남
+				<input type="radio" id="gender2" value="female" name="gender">여
+			</td>
+			<td><input type="button" onclick="checkSex()" id="" name="" value="확인"></td>
+		  </tr>
+		  <tr>
+		    <td>사용언어</td>
+		    <td><input type ="checkbox" value="자바" id="" name="lang">자바
+				<input type ="checkbox" value="SQL" id="" name="lang">SQL
+				<input type ="checkbox" value="자바스크립트" id="" name="lang">자바스크립트
+				<input type ="checkbox" value="파이썬" id="" name="lang">파이썬 </td>
+		  	<td><input type="button" onclick="checkLang()" id="" name="" value="확인"></td>
+		  </tr>
+		  <tr>
+		    <td>취미</td>
+		    <td><select id="hobby" name="hobby">
+		    		<option value="0">--선택--</option>
+					<option>코딩</option>
+					<option>분석</option>
+					<option>설계</option>
+					<option>테스팅</option>
+				</select></td>
+			<td><input type="button" onclick="checkOpt()" id="" name="" value="확인"></td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td><input type="submit" value="전송" ></td>
+		  </tr>
+		</table>
+		
+				
+	</form>
+
+
+</body>
+</html>

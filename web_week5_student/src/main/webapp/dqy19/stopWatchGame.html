@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스탑워치게임</title>
+	<style type="text/css">
+	
+		form {width:350px;
+			 height:500px;
+			 margin: 20px 0 20px 0;
+				}
+		input{width:100px;
+			 height:50px;
+				margin: 10px 35% 10px 35%;
+		}
+		p{width : 300px;
+		  margin: 0 5% 0 5%;
+			}
+		h1{width : 200px;
+			padding: 0 40% 0 40%;}
+	
+	</style>
+	<script type="text/javascript">
+		var stopWatch;
+		var rand;
+		var check;
+		var cnt = 0;
+		var time = 0;
+		var dif;
+
+		
+		var difficulty = function(dft){
+			document.querySelector("#easyWatchBtn").value = "시작";
+			document.querySelector("#easyWatchBtn").setAttribute("onclick","start()");
+			document.querySelector("#testWatchBtn").setAttribute("type","hidden");
+
+			document.querySelector("#normalWatchBtn").setAttribute("type","hidden");
+			document.querySelector("#hardWatchBtn").setAttribute("type","hidden");
+			var ment = document.querySelector("#ment");
+			if(dft=="easy"){
+				rand = Math.floor(Math.random()*30)+1;//30초
+				time = 1000;
+				dif = "easy";
+				ment.textContent = "이지모드는 1~30초 사이에서 맞추시면 됩니다!";
+			}else if(dft =="normal"){
+				rand = Math.floor(Math.random()*60)+1;//1분
+				time =1000;
+				dif = "normal";
+				ment.textContent = "노말모드는 1~60초 사이에서 맞추시면 됩니다!";
+			}else if(dft == "hard"){
+				rand = Math.floor(Math.random()*1800)+1;//3분 0.1초포함
+				time = 100;
+				dif = "hard";
+				ment.textContent = "하드모드는 1~180초 사이에서 0.1초를 단위로 하여 1초는 10입니다!";
+			}
+			else if(dft == "test"){
+				rand = Math.floor(Math.random()*10)+1;//10초
+				time =1000;
+				dif = "test";
+				ment.textContent = "연습모드는 1~10초 사이에서 시간을 보면서 맞추시면 됩니다!";
+			}
+			
+		};
+		
+		
+		var start = function() {
+			
+			document.querySelector("#easyWatchBtn").value = "멈춤";
+			var ment = document.getElementById("ment");
+			ment.textContent = "";
+			var clock = document.getElementById("easyWatchBtn");
+			
+			var watch = document.getElementById("stopwatch");
+			clock.setAttribute("onclick","stop()")
+			cnt=0;
+			watch.innerHTML = rand;
+			ment.innerHTML = "시작~";
+			if(dif == "test"){
+				stopWatch = setInterval(function() {
+				
+					ment.innerHTML = cnt+1;
+					cnt += 1;
+					
+				}, time);
+			}
+			else
+				stopWatch = setInterval(function() {
+		
+					cnt += 1;
+				
+				}, time);
+			
+		}
+		var stop = function() {
+			var btn = document.querySelector("#easyWatchBtn"); 
+			btn.value = "이지모드";
+			btn.setAttribute("onclick","difficulty('easy')")
+			document.querySelector("#normalWatchBtn").setAttribute("type","button");
+			document.querySelector("#hardWatchBtn").setAttribute("type","button");
+			document.querySelector("#testWatchBtn").setAttribute("type","button");
+
+			var ment = document.querySelector("#ment");
+			var ment1 = document.querySelector("#ment1");
+			var watch = document.getElementById("stopwatch");
+			
+			clearInterval(stopWatch);
+			watch.textCotent = "";
+			var str = "";
+			var str1 = "랜덤시간은"+rand+"!!";
+			if(dif=="hard"){
+				cnt = cnt / 10.0;
+			}
+			if(cnt > rand){
+				str = "멈추신 시간은"+cnt+"초 너무 느리시네요ㅠ";
+			}
+			else if(cnt<rand){
+				str = "멈추신 시간은"+cnt+"초 너무 빨랐어요~";
+			}
+			else if(cnt == rand){
+				
+				str = "멈추신 시간은"+cnt+"초 너무 완벽했어요!!";
+			}
+			ment1.textContent = str1;
+			ment.textContent = str;
+				
+		}
+	
+	</script>
+
+
+
+</head>
+<body>
+	<form action="#">
+	<h3 id="stopwatch"></h3>
+	<p id="ment1"></p>
+	<p id="ment">난이도를 선택해주세요!</p>
+	<div></div>
+	<div><input type="button" id="testWatchBtn" value = "연습모드" onclick="difficulty('test')"></div>
+	<div><input type="button" id="easyWatchBtn" value = "이지모드" onclick="difficulty('easy')"></div>
+	<div><input type="button" id="normalWatchBtn" value = "노말모드" onclick="difficulty('normal')"></div>
+	<div><input type="button" id="hardWatchBtn" value = "하드모드" onclick="difficulty('hard')"></div>
+	</form>
+
+</body>
+</html>
