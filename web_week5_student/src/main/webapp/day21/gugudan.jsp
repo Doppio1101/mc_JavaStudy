@@ -7,7 +7,7 @@
 <title>Gugudan</title>
 </head>
 <body>
-<form action="request_gugudan.html" method="get">
+
 <% 	
 	String temp = request.getParameter("dan");
 	int dan = Integer.parseInt(temp);
@@ -21,7 +21,9 @@
 
 
 %>
-<input type="submit" value="돌아가기">
+
+<a href="request_gugudan.html">돌아가기</a>
+
 </form>
 </body>
 </html>
