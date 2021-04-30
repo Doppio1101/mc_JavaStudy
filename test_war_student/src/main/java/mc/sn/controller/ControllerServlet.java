@@ -2,6 +2,7 @@ package mc.sn.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,7 +36,8 @@ public class ControllerServlet extends HttpServlet {
 		PrintWriter out = resp.getWriter();
 		out.print("<h1>Welcome! Servlet</h1>");
 		BusinessService bs = new BusinessService();
-		String result = bs.checkWorkingDatabase();
+		//String result = bs.checkWorkingDatabase();
+		ArrayList<String> result = bs.checkWorkingDatabase();
 		if(result != null) {
 			out.print("db is working");
 		}else {
