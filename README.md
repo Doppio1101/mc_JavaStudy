@@ -10,5 +10,9 @@
 
   - 언제, 어디 문제 발췌, 어려웠던 점. 표시
 
-  
+- CRUD
+  - C : Create  생성
+  - R : Read    읽기
+  - U : Update  갱신
+  - D : Delete  삭제
 
