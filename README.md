@@ -10,6 +10,14 @@
 
   - 언제, 어디 문제 발췌, 어려웠던 점. 표시
 
+- MVC Pattern
+  - M : Model
+  - V : View
+  - C : Controller
+
+- Input/Output - Controller - Service - CM - DB
+- ------------------- VO ----------------------
+
 - CRUD
   - C : Create  생성
   - R : Read    읽기
