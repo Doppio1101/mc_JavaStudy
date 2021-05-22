@@ -15,8 +15,8 @@
   - V : View
   - C : Controller
 
-- Input/Output - Controller - Service - CM - DB
--   ------------------- VO ----------------------
+- Input/Output - Controller - Service - DAO - CM - DB
+- ------------------------- VO -------------------------
 
 - CRUD
   - C : Create  생성
